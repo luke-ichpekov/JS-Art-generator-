@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Art generator</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="middle-settings">
+        <div class="options-wrapper">
+            <div class="shape-wrapper">
+                <label for="shape">selected shape:</label>
+                <select name="shape" id="shape-select"> 
+                    <option value="triangle">triangle</option>
+                    <option value="rectangle">rectangle</option>
+                    <option value="arc">arc</option>
+                    <option value="ellipse">ellipse</option>
+                    <option value="circle">circle</option>
+                    <option value="line">line</option>
+                    <option value="point">point</option>
+                    <option value="quad">quad</option>
+                    <option value="square">square</option>
+                </select>
+            </div>
+            <div class="num-shape-wrapper">
+                <label for="number-of-shapes">number of shapes:</label>
+                <input type="range" name="number-of-shapes" id="num-shape-select" min="50" max="2000" value="500">
+                <span class="num-shapes-display">500</span>
+            </div>
+    
+            <div class="radio-wrapper">                
+                <label for="full-color">color</label>
+                <input type="radio" name="colorSelect" id="full-color" checked>
+            </div>
+            <div class="radio-wrapper">                
+                <label for="monochromatic">monochromatic</label>
+                <input type="radio" name="colorSelect" id="monochromatic">
+            </div>
+            <div class="bg-color-selector">
+                <label for="bg-fill">bg fill</label>
+                <input type="color" name="bg-fill" id="bg-fill" value="#ffffff">
+            </div>
+
+            <div class="size-of-shape">
+                <label for="size-select">size of shapes</label>
+                <select name="size-selector" id="size-selector">
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="large">large</option>
+                </select>
+            </div>
+
+            <div class="generate-btn-wrapper">
+                <button id="generate">
+                    Generate
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+    <h1 style="padding: 2rem; text-align: center;">JavaScript art generator :) </h1>
+
+    <main id="canvas">       
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_iYvSqSMKZB.json" class="lottie-bg" speed="1"  loop autoplay>
+        </lottie-player>        
+    </main>
+    
+    <div class="post-generate-btns-wrapper">
+        <button id="recreate">
+            regenerate
+        </button>
+        <button id="settings">
+            settings
+        </button>
+        <button id="save">
+            save
+        </button>
+    </div>
+
+    </div>
+    
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
